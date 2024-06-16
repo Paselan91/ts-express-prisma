@@ -2,6 +2,9 @@
 ```zsh
 docker compose up --build
 ```
+```zsh
+docker-compose exec api yarn prisma migrate dev
+```
 
 ### POST Request
 ```zsh
