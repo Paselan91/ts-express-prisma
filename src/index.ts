@@ -3,7 +3,7 @@ import { PrismaClient } from '@prisma/client';
 
 const app = express();
 const prisma = new PrismaClient();
-const port = 3000;
+const port = 80;
 
 app.use(express.json());
 
@@ -32,5 +32,5 @@ app.post('/users', async (req: Request, res: Response) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server is running at http://localhost:${port}`);
+  console.log(`Running on port: ${port}`);
 });

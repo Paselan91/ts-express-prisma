@@ -4,7 +4,7 @@ services:
   api:
     build: .
     ports:
-      - "3000:3000"
+      - "80:80"
     environment:
       DATABASE_URL: "mysql://root:example@mysql:3306/testdb"
     volumes:

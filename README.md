@@ -6,9 +6,18 @@ docker compose up --build
 docker-compose exec api yarn prisma migrate dev
 ```
 
+# Update src
+update src, you need to exec following command to update dist.
+```zsh
+yarn build
+```
+```zsh
+docker compose up 
+```
+
 ### POST Request
 ```zsh
-curl -X POST http://localhost:3000/users -H "Content-Type: application/json" -d '{"name": "John Doe", "age": 30}' 
+curl -X POST http://localhost:80/users -H "Content-Type: application/json" -d '{"name": "John Doe", "age": 30}' 
 ```
 ```json
 {"id":4,"name":"John Doe","age":30}  
@@ -16,7 +25,7 @@ curl -X POST http://localhost:3000/users -H "Content-Type: application/json" -d 
 
 ### GET Request
 ```zsh
-curl http://localhost:3000/users
+curl http://localhost:80/users
 ```
 
 Response

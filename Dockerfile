@@ -9,12 +9,11 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 COPY package*.json ./
-# 開発依存関係を含むすべての依存関係をインストール
+
 RUN npm install
 
 COPY . .
 
-# TypeScriptファイルをコンパイル
 RUN npm run build
 
 EXPOSE 3000

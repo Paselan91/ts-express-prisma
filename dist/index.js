@@ -16,7 +16,7 @@ const express_1 = __importDefault(require("express"));
 const client_1 = require("@prisma/client");
 const app = (0, express_1.default)();
 const prisma = new client_1.PrismaClient();
-const port = 3000;
+const port = 80;
 app.use(express_1.default.json());
 app.get('/users', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
@@ -43,5 +43,5 @@ app.post('/users', (req, res) => __awaiter(void 0, void 0, void 0, function* () 
     }
 }));
 app.listen(port, () => {
-    console.log(`Server is running at http://localhost:${port}`);
+    console.log(`Running on port: ${port}`);
 });
