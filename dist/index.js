@@ -18,6 +18,9 @@ const app = (0, express_1.default)();
 const prisma = new client_1.PrismaClient();
 const port = 80;
 app.use(express_1.default.json());
+app.get('/hello-test', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    res.status(200).json({ message: 'hello' });
+}));
 app.get('/users', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const users = yield prisma.user.findMany();

@@ -7,6 +7,10 @@ const port = 80;
 
 app.use(express.json());
 
+app.get('/hello-test', async (req: Request, res: Response) => {
+  res.status(200).json({ message: 'hello' });
+});
+
 app.get('/users', async (req: Request, res: Response) => {
   try {
     const users = await prisma.user.findMany();
