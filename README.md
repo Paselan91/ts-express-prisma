@@ -37,5 +37,5 @@ Response
 # Deploy to AWS ECR
 Exec build-deploy-to-ecr.sh
 ```zsh
-ECR_ENDPOINT=<your-ecr-endpoint> ECS_CLUSTER_NAME=my-cluster ECS_SERVICE_NAME=my-service IMAGE_NAME=latest ./build-deploy-to-ecr.sh
+ECR_ENDPOINT=<your-ecr-uri> ECS_CLUSTER_NAME=my-cluster ECS_SERVICE_NAME=my-service IMAGE_NAME=latest ./build-deploy-to-ecr.sh
 ```
