@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # How to exec this script
-# ECR_ENDPOINT=<your-account-id>.dkr.ecr.ap-northeast-1.amazonaws.com/fms-dev-repository ECS_CLUSTER_NAME=my-cluster ECS_SERVICE_NAME=my-service IMAGE_NAME=latest ./build-deploy-to-ecr.sh
+# ECR_ENDPOINT=<your-ecr-endpoint> ECS_CLUSTER_NAME=my-cluster ECS_SERVICE_NAME=my-service IMAGE_NAME=latest ./build-deploy-to-ecr.sh
 
 # Exit the script if any command fails
 set -e
