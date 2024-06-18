@@ -6,8 +6,8 @@ docker compose up --build
 docker-compose exec api yarn prisma migrate dev
 ```
 
-# Update src
-update src, you need to exec following command to update dist.
+# Update API
+After Update API, you need to exec following command to update dist.
 ```zsh
 yarn build
 ```
@@ -34,3 +34,8 @@ Response
 ```
 
 
+# Deploy to AWS ECR
+Exec build-deploy-to-ecr.sh
+```zsh
+ECR_ENDPOINT=<your-ecr-endpoint> ECS_CLUSTER_NAME=my-cluster ECS_SERVICE_NAME=my-service IMAGE_NAME=latest ./build-deploy-to-ecr.sh
+```
