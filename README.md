@@ -17,10 +17,10 @@ docker compose up
 
 ### POST Request
 ```zsh
-curl -X POST http://localhost:80/users -H "Content-Type: application/json" -d '{"name": "John Doe", "age": 30}' 
+curl -X POST http://localhost:80/users -H "Content-Type: application/json" -d '{"name": "John Doe", "age": 30}'
 ```
 ```json
-{"id":4,"name":"John Doe","age":30}  
+{"id":4,"name":"John Doe","age":30}
 ```
 
 ### GET Request
